@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>「エラー安全性」のすすめ</title>
+<meta name="description" content="主に C++ プログラマの中で広く普及してきた「例外安全性」ですが、その性質や概念の本質的な部分は C++ やその例外処理機構に限ってのものではないので、より一般的に「エラー安全性」として再認識されるべきです。" />
+</head>
+<body>
+<h1>「エラー安全性」のすすめ</h1>
+<p>
+プログラミング言語 C++ に例外処理機構が盛り込まれてから長い時間をかけて、主に C++ プログラマの中では「例外安全性」という言葉が広く普及してきました。しかし、その性質や概念の本質的な部分は C++ やその例外処理機構に限ってのものではありません。
+</p>
+<p>
+たとえば、例外安全性についての重要な概念のひとつに「強い例外安全性保証」というものがあります。これは、ある処理を試みた結果、その処理が例外によって中断された場合、プログラムの状態が処理を試みる前と同じに保たれているということの保証です。この保証があれば、プログラムは定義済みの状態に保たれ、例外を通知された側は安全にプログラムの実行（リトライなどのエラー処理含む）を継続できます。
+</p>
+<p>
+ここで「例外によって中断された場合」を「処理が完了せず失敗した場合」と、より広い意味に置き換えても、それ以外の概念や得られる利点は変わらず有効です。強い例外安全性保証を提供する C++ の処理と同様の性質は、それが（ C++ 以前も含めて）どんな言語で記述されているかによらず、重要な情報を扱う処理には自然と望まれるものです。
+</p>
+<p>
+たとえば銀行口座間の振込み中に何か問題が起こって処理が完了できなかった場合に、片方の口座での出金あるいは入金だけが行われた状態になるようでは困ります。この例はさらに、こういった性質が望まれるのはソフトウェアによる処理に限ったことでもないということを示していると言えます。
+</p>
+<p>
+つまり例外安全性の本質は特定のプログラミング言語機能としての例外とは直接関係ないものだということです。このため、例外安全性（例外安全）として知られた概念の多くは、より一般的に「エラー安全性」（「エラー安全」）として再認識されるべきです。
+</p>
+<p>
+ねがわくば、この呼び名の置き換えをもって、より多くの人（主にソフトウェア開発者）がこの重要な概念に触れ、そして実際に役立てられますように。
+</p>
+<ul>
+<li><a href="https://groups.google.com/d/msg/comp.lang.c++.moderated/ICQzLZU_AuQ/QscRS_rDoiYJ"><q>... I've been saying ... that exception-safety was a misnomer.</q></a></li>
+<li><a href="http://accu.org/index.php/journals/1505">Exceptions Make for Elegant Code</a></li>
+<li><a href="http://www.gotw.ca/sands2.htm"><q>... main difficulty in writing exception-safe code has little to do with exceptions in particular, but with error handling in general. ...</q></a></li>
+</ul>
+<hr />
+<p>Copyright&nbsp;&copy;&nbsp;2010 <a href="http://k_satoda.users.sourceforge.net/">里田 和敏</a> (<a href="mailto:k_satoda@f2.dion.ne.jp">k_satoda@f2.dion.ne.jp</a>)</p>
+</body>
+</html>

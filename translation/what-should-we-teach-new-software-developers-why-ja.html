@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>何を新しいソフトウェア開発者に教えるべきか？それはなぜか？</title>
+
+	<meta name="title" content="何を新しいソフトウェア開発者に教えるべきか？それはなぜか？" />
+	<meta name="author" content="Kazutoshi Satoda" />
+	<!-- meta name="date" content="2010-01-01" / -->
+</head>
+
+
+<body>
+<h1>何を新しいソフトウェア開発者に教えるべきか？それはなぜか？</h1>
+<p>（原題: What Should We Teach New Software Developers? Why? ）</p>
+
+<img alt="[article image]" class="pic" src="What_Should_We.large.jpg" title="whiteboard eraser" align="right" />
+<!-- p class='lead'>Fundamental changes to computer science education are required to better address the needs of industry.</p -->
+<p class='lead'>産業界のニーズによりよく応えるために計算機科学教育に対して根本的な変革が必要です。</p>
+<p class='byline'>Bjarne Stroustrup</p>
+<p class='metadata'>
+Communications of the ACM
+<br />
+Vol. 53 No. 1, Pages 40-42
+<br />
+10.1145/1629175.1629192
+</p>
+<p>日本語訳: 里田 和敏</p>
+
+<!-- BEGIN BODY-1 -->
+
+<a name="body-1"></a>
+<!-- p>Computer science must be at the center of software systems development. If it is not, we must rely on individual experience and rules of thumb, ending up with less capable, less reliable systems, developed and maintained at unnecessarily high cost. We need changes in education to allow for improvements of industrial practice.</p -->
+<p>計算機科学（訳注: Computer Science = CS ）はソフトウェアシステム開発の中心になければいけません。そうでなければ、私たちは各個人の感覚や経験則に頼らざるをえず、挙句に性能も劣り信頼性も劣るシステムを不必要に高いコストをかけて開発し保守することになってしまいます。私たちは産業界での実業務の改善を考慮に入れるよう、教育における変革を必要としています。</p>
+
+<!-- END BODY-1 -->
+
+<!-- BEGIN BODY-2 -->
+
+<a name="body-2"></a>
+<!-- h3>The Problem</h3 -->
+<h3>問題</h3>
+<!-- p>In many places, there is a disconnect between computer science education and what industry needs. Consider the following exchange:</p -->
+<p>多くのところで、計算機科学教育と産業界が必要とするものとの間には隔たりがあります。次のやりとりを考えてください:</p>
+
+<!-- p>Famous CS professor (proudly): "<i>We don't teach programming; we teach computer science</i>."</p -->
+<p>有名な CS 教授 (誇らしく): 「<i>われわれはプログラミングを教えるのではない。計算機科学を教えるのだ。</i>」</p>
+
+<!-- p>Industrial manager: "<i>They can't program their way out of a paper bag</i>."</p -->
+<p>業界経営者: 「<i>彼らはほんのちょっとのプログラムだってやりとげられやしない。</i>」</p>
+
+<!-- p>In many cases, they are both right, and not just at a superficial level. It is not the job of academia just to teach run-of-the-mill programmers and the needs of industry are not just for "well-rounded high-level thinkers" and "scientists."</p -->
+<p>多くの場合、彼らはどちらも表層的なレベルにとどまらず正しいことを言っています。ありきたりのプログラマを育てるだけのことは学界の仕事ではありませんし、業界のニーズは「熟練した高度な思想家」や「科学者」だけに向けられるものではありません。</p>
+
+<!-- p>Another CS professor: "<i>I never code</i>."</p -->
+<p>別の CS 教授: 「<i>私はまったくコードを書きません。</i>」</p>
+
+<!-- p>Another industrial manager: "<i>We don't hire CS graduates;
+it's easier to teach a physicist to program than to teach a CS
+graduate physics</i>."</p -->
+<p>別の業界経営者: 「<i>私たちは CS 卒業生を雇いません。 CS 卒業生に物理を教えるよりも、物理学者にプログラムを教えるほうが簡単だからです。</i>」</p>
+
+<!-- p>Both have a point, but in an ideal world, both would be fundamentally misguided. The professor is wrong in that you can't teach what you don't practice (and in many cases, never have practiced) and therefore don't understand, whereas the industrial manager is right only when the requirements for software quality are set so absurdly low that physicists (and others untrained in CS) can cope. Obviously, I'm not referring to physicists who have devoted significant effort to also master computer science&#151;such combinations of skills are among my ideals.</p -->
+<p>どちらにも一理ありますが、しかし理想的な世界では、どちらも根本的に心得違いとなるでしょう。教授は、自分が実践しない（そして多くの場合、一度も実践したことがない）、結果として理解していないものを教えることはできないという点で間違っており、いっぽう業界経営者のほうは、ソフトウェアの品質に対する要求が物理学者（そして CS について未熟なその他）でも賄えるほど馬鹿らしいくらい低く設定されているときにだけしか正しくありません。言うまでもなく、私は計算機科学をも習得するために多大な努力を注ぎ込んだ物理学者を指してはいません—そういった技能の組み合わせは私の理想の中にあります。</p>
+
+<!-- p>CS professor (about a student): "<i>He accepted a job in industry</i>."</p -->
+<p>CS 教授 (学生について): 「<i>彼は業界の仕事に就くことになったよ。</i>」</p>
+
+<!-- p>Another CS professor: "<i>Sad; he showed so much promise</i>."</p -->
+<p>別の CS 教授: 「<i>残念。彼にはとても見込みがあったのに。</i>」</p>
+
+<!-- p>This disconnect is at the root of many problems and complicates attempts to remedy them.</p -->
+<p>この隔たりは多くの問題の根底にあり、それらを改善しようとする試みを困難にします。</p>
+
+<!-- p>Industry wants computer science graduates to build software (at least initially in their careers). That software is often part of a long-lived code base and used for embedded or distributed systems with high reliability requirements. However, many graduates have essentially no education or training in software development outside their hobbyist activities. In particular, most see programming as a minimal effort to complete homework and rarely take a broader view that includes systematic testing, maintenance, documentation, and the use of their code by others. Also, many students fail to connect what they learn in one class to what they learn in another. Thus, we often see students with high grades in algorithms, data structures, and software engineering who nevertheless hack solutions in an operating systems class with total disregard for data structures, algorithms, and the structure of the software. The result is a poorly performing unmaintainable mess.</p -->
+<p>業界は計算機科学の卒業生に（少なくとも彼らのキャリアの初期には）ソフトウェアを組むことを望みます。そのソフトウェアはしばしば長く生き続けるコードベースの一部となり、高い信頼性要求の組み込み或いは配布されるシステムに使われます。しかし、多くの卒業生は趣味的な活動の他には本質的にソフトウェア開発の教育や訓練を受けてはいません。詳しくいえば、ほとんどはプログラミングを宿題を片付けるための最低限の労務と見ており、システマティックなテスト、保守、文書化、他の人によるそのコードの利用を含む、より広い視点に立つことはほとんどありません。また、多くの学生がある授業で学んだことと別の授業で学んだこととを結びつけるのに失敗します。そのため、アルゴリズムやデータ構造やソフトウェア工学において高い点数を取っているにもかかわらず、オペレーティングシステムの授業ではデータ構造やアルゴリズムやソフトウェアの構造をまったく無視して解答をひねり出す学生を私たちはよく見かけます。その結果は、まずい動作をする保守不能な失敗作です。</p>
+
+<!-- p>For many, "programming" has become a strange combination of unprincipled hacking and invoking other people's libraries (with only the vaguest idea of what's going on). The notions of "maintenance" and "code quality" are typically forgotten or poorly understood. In industry, complaints about the difficulty of finding graduates who understand "systems" and "can architect
+software" are common and reflect reality.</p -->
+<p>多くの人にとって、「プログラミング」は無節操なハックと他の人のライブラリの（行われることについてごくぼんやりとした理解だけでの）呼び出しとの不可思議な組み合わせとなってしまっています。「保守」や「コードの品質」への思慮は典型的には無視されるか不十分にしか理解されません。業界において「システム」を理解し「ソフトウェアを設計できる」卒業生を見つけることの難しさは広く見られ、現実を反映しています。</p>
+
+<!-- END BODY-2 -->
+
+<!-- BEGIN BODY-3 -->
+
+<a name="body-3"></a>
+<!-- h3>But my Computer Hasn't Crashed Lately</h3 -->
+<h3>でも私のコンピュータは近頃クラッシュしてません</h3>
+
+
+
+<!-- p>Complaining about software is a popular pastime, but much software has become better over the last decade, exactly as it improved in previous decades. Unfortunately, the improvements have come at tremendous cost in terms of human effort and computer resources. Basically, we have learned how to build reasonably reliable systems out of unreliable parts by adding endless layers of runtime checks and massive testing. The structure of the code itself has sometimes changed, but not always for the better. Often, the many layers of software and the intricate dependencies common in designs prevent an individual&#151;however competent&#151;from fully understanding a system. This bodes ill for the future: we do not understand and cannot even measure critical aspects of our systems.</p -->
+<p>ソフトウェアに対して不満を言うことはよくある気晴らしですが、多くのソフトウェアはこの十年で、まさしくその前の十年二十年のように、改良されてきました。不幸なことに、それらの進歩は人々の努力やコンピュータのリソースの面で莫大なコストを払ってもたらされています。基本的に、私たちは無数の実行時検査レイヤの追加や大量のテストによって、信頼できない部品から十分に信頼できるシステムを作り上げる方法を学んできました。コード自体の構成は時に変化してきましたが、常に良い方向にではありません。しばしば、たくさんのソフトウェアのレイヤや、設計に良く見られる入り組んだ依存関係は、個人が—どんなに有能であっても—完全にシステムを理解することを妨げます。これは将来的な災いを示唆します。すなわち、私たちは自分のシステムの重大な側面を理解せず、評価することすらできないということです。</p>
+
+<!-- p>There are of course system builders who have resisted the pressures to build bloated, ill-understood systems. We can thank them when our computerized planes don't crash, our phones work, and our mail arrives on time. They deserve praise for their efforts to make software development a mature and trustworthy set of principles, tools, and techniques. Unfortunately, they are a minority and bloatware dominates most people's impression and thinking.</p -->
+<p>もちろん、肥大化して不可解なシステムを作らせる圧力に抵抗してきたシステム作成者もいます。私たちは、コンピュータ化された飛行機が墜落しなかったり、電話が動作したり、メールが即座に届いたりしたときには彼らに感謝してもいいでしょう。ソフトウェア開発を成熟して信頼できる原理やツールや技法の集まりとするためのその努力に対して、彼らは賞賛を受けるに値します。残念ながら彼らは少数派であり、ほとんどの人々の気持ちや考えはブロートウェア（訳注：肥大化したソフトウェア）が支配しています。</p>
+
+<!-- p>Similarly, there are educators who have fought the separation of theory and industrial practice. They too deserve praise and active support. In fact, every educational institution I know of has programs aimed at providing practical experience and some professors have devoted their lives to making successes of particular programs. However, looking at the larger picture, I'm unimpressed&#151;a couple of projects or internships are a good start, but not a substitute for a comprehensive approach to a balanced curriculum. Preferring the labels "software engineering" or "IT" over "CS" may indicate differences in perspective, but problems have a nasty way of reemerging in slightly different guises after a move to a new setting.</p -->
+<p>同じように、理論と業界の実態との乖離に対して戦ってきた教育者もいます。彼らも賞賛と積極的な支援を受けるに値します。実のところ、私の知る教育機関はすべて実務的な経験をねらった教程を持っていて、その教程を成功させるために自分の生活をささげてきた教授もいます。しかし俯瞰してみると、感心できなくなります—ひとつふたつのプロジェクトやインターンシップは良いスタートですが、バランスの取れたカリキュラムに向けた包括的な取り組みの置き換えとはなりません。「CS」よりも「IT」や「ソフトウェア工学」というラベルを好むことは観点の違いを示すのかもしれませんが、問題というものは新しい環境に移れば微妙に違った姿でまた現れるという嫌な面を持っているものです。</p>
+
+<!-- p>My characterizations of "industry" and "academia" border on caricature, but I'm confident that anyone with a bit of experience will recognize parts of reality reflected in them. My perspective is that of an industrial researcher and manager (24 years at AT&amp;T Bell Labs, seven of those as department head) who has now spent six years in academia (in a CS department of an engineering school). I travel a lot, having serious discussions with technical and managerial people from several dozen (mostly U.S.) companies every year. I see the mismatch between what universities produce and what industry needs as a threat to both the viability of CS and to the computing industry.</p -->
+<p>業界と学界についての私の描写は戯画に近いものですが、少し経験のある人なら誰でも、そこに反映された現実の部分に覚えがあるだろうと確信しています。私の視点は、今は学界（工学校の CS 学科）で 6 年間勤めた、産業界の研究者および管理者（ AT&amp;T ベル研究所での 24 年間と、そのうち部長としての 7 年間）としてのものです。私は多くの旅行をし、毎年数十の（主に U.S. の）会社の技術的で経営的立場の人たちと真剣な議論をします。私はこの、大学が生み出すものと業界が望むものとの食い違いを、 CS の可能性とコンピューティング産業との両方についての悪い兆しと見ています。</p>
+
+<hr align="center" width="50%" />
+
+<blockquote>
+
+<!-- p align="center"><i>Many organizations that rely critically on computing have become dangerously low on technical
+skills.</i></p -->
+<p align="center"><i>コンピュータの利用に決定的に依存している多くの組織が危険なほど技術的スキルに乏しくなっています。</i></p>
+
+</blockquote>
+
+<hr align="center" width="50%" />
+
+<!-- END BODY-3 -->
+
+<!-- BEGIN BODY-4 -->
+
+<a name="body-4"></a>
+<!-- h3>The Academia/Industry Gap</h3 -->
+<h3>学界/業界のギャップ</h3>
+
+
+<!-- p>So what can we do? Industry would prefer to hire "developers" fully trained in the latest tools and techniques whereas academia's greatest ambition is to produce more and better professors. To make progress, these ideals must become better aligned. Graduates going to industry must have a good grasp of software development and industry must develop much better mechanisms for absorbing new ideas, tools, and techniques. Inserting a good developer into a culture designed to prevent semi-skilled programmers from doing harm is pointless because the new developer will be constrained from doing anything
+significantly new and better.</p -->
+<p>では私たちに何ができるでしょうか？業界は最新のツールと技法の中で十分に訓練された「開発者」を雇うことを望むでしょうが、その一方で学界の最大の狙いはより多くより優れた教授を生み出すことです。改善のためにはこれらの理想がよく調整されなければなりません。業界に入ろうとする卒業生はソフトウェア開発について適切な理解を備えておくべきですし、業界は新しいアイディアやツールや技法を取り入れるためのより良い仕組みを発達させなければなりません。半人前のプログラマが害を起こすのを防ぐように図られた文化の中に優れた開発者を送り込むのは、その新しい開発者が斬新で優れた何をするのも制限されてしまうので、不毛なことです。</p>
+
+<!-- p>Let me point to the issue of scale. Many industrial systems consist of millions of lines of code, whereas a student can graduate with honors from top CS programs without ever writing a program larger than 1,000 lines. All major industrial projects involve several people whereas many CS programs value individual work to the point of discouraging teamwork. Realizing this, many organizations focus on simplifying tools, techniques, languages, and operating procedures to minimize the reliance on developer skills. This is wasteful of human talent and effort because it reduces everybody to the lowest common denominator.</p -->
+<p>スケールについての話もしておきましょう。多くの産業的システムは数百万行のコードから成りますが、その一方で学生は千行よりも大きなプログラムを一度も書くことなく最高の CS 教程を優等で卒業することができます。すべての主要な産業的プロジェクトには幾人かの人員が参加しますが、多くの CS 教程はチームワークを妨げるように気をつけて個人的な成果を評価します。この現実に応じて、多くの組織は開発者の能力への依存を
+最小化するようにツールや技法や言語や操作手順を単純化することに注力しています。これは全員を最小公分母へ押し下げることになるため、人的才能や努力を無駄にしてしまいます。</p>
+
+<!-- p>Industry wants to rely on tried-and-true tools and techniques, but is also addicted to dreams of "silver bullets," "transformative breakthroughs," "killer apps," and so forth. They want to be able to operate with minimally skilled and interchangeable developers guided by a few "visionaries" too grand to be bothered by details of code quality. This leads to immense conservatism in the choice of basic tools (such as programming languages and operating systems) and a desire for monocultures (to minimize training and deployment costs). In turn, this leads to the development of huge proprietary and mutually incompatible infrastructures: Something beyond the basic tools is needed to enable developers to produce applications and platform purveyors want something to lock in developers despite the commonality of basic tools. Reward systems favor both grandiose corporate schemes and short-term results. The resulting
+costs are staggering, as are the failure rates for new
+projects.</p -->
+<p>業界は試験済みで間違いの無いツールや技法を頼りにしたいのですが、しかしまた「銀の弾丸」「変化をもたらす大発見」「キラーアプリ」等々の夢にも耽っています。彼らは、コードの品質についての詳細に悩まされるには偉過ぎる少数の「夢想家」に率いられ、最低限の技術を持ち交換可能な開発者たちでやりくりしていけることを望んでいます。これは、基本的なツール（プログラミング言語やオペレーティングシステムなど）の選択についての頑なな保守傾向や、（教育や配備のコストを最小化する）単一化への願望を導きます。さらにこれは、巨大な私有の、相互に互換性の無いインフラの造成につながります。開発者がアプリケーションを作るのを可能にするためには基本的なツールを超えた何かが必要になり、プラットフォーム提供者は開発者を囲い込むための何かを、その基本的なツールの共通性に関わらず欲しがります。報奨システムは、大企業によるたくらみと短期的な結果との両方を促進します。結果的なコストは、新しいプロジェクトが失敗する割合がそうであるように、驚異的なものとなります。</p>
+
+<!-- p>Faced with that industrial reality&#151;and other similar deterrents&#151;academia turns in on itself, doing what it does best: carefully studying phenomena that can be dealt with in isolation by a small group of like-minded people, building solid theoretical foundations, and crafting perfect designs and techniques for idealized problems. Proprietary tools for dealing with huge code bases written in archaic styles don't fit this model. Like industry, academia develops reward structures to match. This all fits perfectly with a steady improvement of smokestack courses in well-delineated academic subjects. Thus, academic successes fit industrial needs like a square peg in a round hole and industry has to carry training costs as well as development costs for specialized infrastructures.</p -->
+<p>業界の現実—そしてそのほかの同様の妨げ—に面して、学界はその最善を尽くしながらも内に閉じ篭ってしまっています: 似たような考えの人から成る小さなグループへの隔離で対応できる現象について注意深く調査したり、頑丈な理論的基盤を構築したり、理想化された問題について完璧な設計や技法を作り出したり。古臭いスタイルで書かれた巨大なコードベースを対象とする私有のツールはこのモデルに合いません。業界と同様、学界も相応な報奨の構造を作っています。これらはすべて、よく描き出された学術的対象にある重工業コースの着実な進歩と完全に合っています。このため、学界での成功は業界の要求に対して円孔方木となり噛み合わず、業界は特殊化されたインフラの
+開発コストとともに教育コストも負わねばなりません。</p>
+
+<!-- p>Someone always suggests "if industry just paid developers a decent salary, there would be no problem." That might help, but paying more for the same kind of work is not going to help much; for a viable alternative, industry needs better developers. The idea of software development as an assembly line manned by semi-skilled interchangeable workers is fundamentally flawed and wasteful. It pushes the most competent people out of the field and discourages students from entering it. To break this vicious circle, academia must produce more graduates with relevant skills and industry must adopt tools, techniques, and processes to utilize those skills.</p -->
+<p>いつも「業界が開発者に相応の給料を払えば問題はなくなる」と言い出す人がいます。それは助けにはなるでしょうが、同じ種類の仕事により多くを支払うことはあまり多くを助けることになりません。可能な代替として、業界はより優れた開発者を必要とします。ソフトウェア開発を半人前の交換可能な働き手を並べた組み立てラインとする考えは根本的に欠陥をもっており無駄なものです。それは最も有能な人をその分野から押し出し、学生の参入を思いとどまらせます。この悪循環を断ち切るため、学界は適切な技能を持った卒業生をもっと送り出さなければなりませんし、業界はそれらの技能を生かすためのツールや技法やプロセスを受け入れなければなりません。</p>
+
+<!-- END BODY-4 -->
+
+<!-- BEGIN BODY-5 -->
+
+<a name="body-5"></a>
+<h3>プロフェッショナリズムの夢</h3>
+
+
+
+<!-- p>"Computer science" is a horrible and misleading term. CS is not primarily about computers and it is not primarily a science. Rather it is about uses of computers and about ways of working and thinking that involves computation ("algorithmic and quantitative thinking"). It combines aspects of science, math, and engineering, often using computers. For almost all people in CS, it is an applied field&#151;"pure CS," isolated from application, is typically sterile.</p -->
+<p>「計算機科学（訳注: コンピュータサイエンス）」とは嫌な紛らわしい言葉です。 CS は主としてコンピュータに関するのではありませんし、本来科学ではありません。むしろコンピュータの利用者や計算を伴った仕事や思考（「アルゴリズム的で定量的な思考」）に関するものです。それは科学や数学や工学の側面を、多くはコンピュータを使って組み合わせます。 CS に身を置くほとんどすべての人にとって、それはひとつの応用分野です—応用から隔てられた「純粋なCS」は概して不毛なものです。</p>
+
+<!-- p>What distinguishes a CS person building an application from a professional in some other field (such as medicine or physics) building one? The answer must "be mastery of the core of CS." What should that "core" be? It would contain much of the established CS curriculum&#151;algorithms, data structures, machine architecture, programming (principled), some math (primarily to teach proof-based and quantitative reasoning), and systems (such as operating systems and databases). To integrate that knowledge and to get an idea of how to handle larger problems, every student must complete several group projects (you could call that basic software engineering). It is essential that there is a balance between the theoretical and the practical&#151;CS is not just principles and theorems, and it is not just hacking code.</p -->
+<p>アプリケーションを作る CS の人とアプリケーションを作る何か別の分野（医学や物理学など）のプロフェッショナルとを区別するものは何でしょうか？答えは「 CS のコアに精通していること」に違いありません。その「コア」とは何になるでしょうか？それは既成の CS カリキュラムの多くを含むでしょう—アルゴリズム、データ構造、マシンアーキテクチャ、プログラミング（根本的なもの）、いくらかの数学（主に証明に基づく定量的な論法を教えるためのもの）、システム（オペレーティングシステムやデータベースなど）。それらの知識を結びつけ、より大きな問題の扱い方を知るため、すべての学生がいくつかのグループプロジェクトを完成させなければなりません（これを基本的なソフトウェア工学と呼んでもいいでしょう）。理論的なこととのバランスが取れていることが肝心です。 CS は原則と理論だけではありませんし、コードをいじくりまわすだけでもありません。</p>
+
+<!-- p>This core is obviously far more "computer-oriented" than the computing field as a whole. Therefore, nobody should be called a computer scientist without adding a specialization within CS (for example, graphics, networking, software architecture, human-machine interactions, security). However that's still not enough. The practice of computer science is inherently applied and interdisciplinary, so every CS professional should have the equivalent to a minor in some other field (for example, physics, medical engineering, history, accountancy, French literature).</p -->
+<p>このコアは明らかにコンピューティングの分野全体よりも遥かにコンピュータ指向です。そのため、 CS の中での特化（たとえば画像、ネットワーク、ソフトウェアアーキテクチャ、人と機械との関わり、セキュリティ）を加えること無しには誰も計算機科学者と呼ばれるべきではありません。しかし、それでも十分ではありません。計算機科学の実践は本来実用的で学際的であり、すべての CS プロフェッショナルは何か他の分野（たとえば物理学、医療工学、歴史学、会計事務、フランス文学）を副専攻したのと同等のものを持っているべきです。</p>
+
+<!-- p>Experienced educators will observe: "But this is impossible! Hardly any students could master all that in four years." Those educators are right: something has to give. My suggestion is that the first degree qualifying to practice as a computers scientist should be a master's&#151;and a master's designed as a whole&#151;not as a bachelor's degree with an appended final year or two. People who plan to do research will as usual aim for a Ph.D.</p -->
+<p>経験のある教育者は言うでしょう: 「しかしこれは不可能だ！どんな学生だってその全てを４年で修めることはできやしない。」これらの教育者は正しいことを言っています。つまり何かを譲る必要があります。私の提案は、計算機科学者として開業する資格を得る最初の学位を、最後の１～２年を加えた学士号ではなく修士号—そして一体として計画された修士号—とするべきだ、というものです。研究をするつもりの人なら普通は博士号を目指すでしょう。</p>
+
+<!-- p>Many professors will object: "I don't have the time to program!" However, I think that professors who teach students who want to become software professionals will have to make time and their institutions must find ways to reward them for programming. The ultimate goal of CS is to help produce better systems. Would you trust someone who had not seen a patient for years to teach surgery? What would you think of a piano teacher who never touched the keyboard? A CS education must bring a student beyond the necessary book learning to a mastery of its application in complete systems and an appreciation of aesthetics in code.</p -->
+<p>多くの教授が反発するでしょう: 「プログラムする時間なんて無いよ！」しかしながら、ソフトウェアのプロになろうとする学生を教える教授ならその時間を作らなければならないでしょうし、制度側は彼らがプログラムすることに報いる方法を見出さねばならないと思います。 CS の究極のゴールは優れたシステムを作る助けになることです。外科医学を教えるのに何年も患者を診ていない誰かをあなたは信じるでしょうか？鍵盤に触れたことが無いピアノの先生をどう思うでしょうか？ CS 教育は学生を必要な読学の先の、完全なシステムに対するその適用に精通し、コードの美学についての正しい理解を得るところまで導かなければなりません。</p>
+
+<!-- p>I use the word "professional." That's a word with many meanings and implications. In fields like medicine and engineering, it implies licensing. Licensing is a very tricky and emotional topic. However, our civilization depends on software. Is it reasonable that essentially anyone can modify a critical body of code based on personal taste and corporate policies? If so, will it still be reasonable in 50 years? Is it reasonable that pieces of software on which millions of people depend come without warranties? The real problem is that professionalism enforced through licensing depends on having a large shared body of knowledge, tools, and techniques. A licensed engineer can certify that a building has been constructed using accepted techniques and materials. In the absence of a widely accepted outline of CS competence (as I suggested earlier), I don't know how to do that for a software application. Today, I wouldn't even know how to select a group of people to design a licensing test (or realistically a set of tests for various subspecialties, like the medical boards).</p -->
+<p>私は「プロフェッショナル」という言葉を使っています。それは多くの意味や暗示を含む言葉です。医学や工学のような分野ではそれは免許制度を示します。免許制度はとても難しく心動かす話題です。どうあれ、私たちの文明はソフトウェアに依存しています。本質的には誰でもが個人的な好みや企業のポリシーに基づいてコードの根幹部分を変更できることが妥当なことでしょうか？もしそうなら、それは５０年先も妥当であるでしょうか？数百万の人が依存するソフトウェアが保証の無い部品からなることが妥当なことでしょうか？現実としての問題は、免許制度によって強制されるプロフェッショナリズムは知識やツールや技法の大きな共有体の存在に依存するということです。免許を持つ設計士は、ある建物が公認の技法と資材を使って建設されていることを保証できます。広く認められた CS 能力（先に示したような）の枠組みがないうちは、ソフトウェアアプリケーションについてそれをどうやって行うのかわかりません。現代においては、免許試験（あるいは現実的には、医療部局（訳注: medical boards アメリカ合衆国の各州に配置される医療機関）のようにいろいろな副専攻のテストの集まり）を作る人の集まりをどう選んだらよいのかすらもわかりません。</p>
+
+<!-- p>What can industry do to close the gap? It is much more difficult to characterize "industry" and "industrial needs" than to talk about academia. After all, academia has a fairly standard structure and fairly standard approaches to achieving its goals. Industry is far more diverse: large or small, commercial or non-profit, sophisticated or average in their approach to system building, and so forth. Consequently, I can't even begin to prescribe remedies. However, I have one observation that related directly to the academia/industry gap: Many organizations that rely critically on computing have become dangerously low on technical skills:</p -->
+<p>このギャップを埋めるために業界には何ができるでしょうか？「業界」や「業界のニーズ」を描き出すことは学界について語ることよりもずっと困難です。今日においては、学界はいくらか標準的な構造と、その目的を達成するためのいくらか標準的な方法を備えています。業界はずっと広く分かれています: 大きいか小さいか、商業的か非営利か、システム構築の方法について洗練されているか平均的か、などなど。そのため、私は療法の処方を始めることすらできません。しかしながら、私はこの学界と業界とのギャップに直接関連するひとつの見解を持っています: コンピュータの利用に決定的に依存している多くの組織が危険なほど技術的スキルに乏しくなっています:</p>
+
+<!-- p>Industrial manager: "<i>The in-sourcing of technical expertise is critical for survival</i>."</p -->
+<p>業界経営者: 「<i>技術的専門家の能力を内部調達することは生き残りに直結します。</i>」</p>
+
+<!-- p>No organization can remain successful without an institutional memory and an infrastructure to recruit and develop new talent. Increasing collaboration with academics interested in software development might be productive for both parties. Collaborative research and an emphasis on lifelong learning that goes beyond mere training courses could play major roles in this.</p -->
+<p>組織的な記憶と新しい才能を補充し育てるためのインフラ無しではどんな組織も成功し続けることはできません。ソフトウェア開発に関心のある学者との共同制作を増やすことは双方にとって実りが多いかもしれません。共同の研究と単なる訓練課程を超えた生涯続く学習への注視とはこの中の主要な役割を果たし得るでしょう。</p>
+
+<!-- END BODY-5 -->
+
+<!-- BEGIN BODY-6 -->
+
+<a name="body-6"></a>
+<!-- h3>Conclusion</h3 -->
+<h3>結論</h3>
+
+
+
+<!-- p>We must do better. Until we do, our infrastructure will continue to creak, bloat, and soak up resources. Eventually, some part will break in some unpredictable and disastrous way (think of Internet routing, online banking, electronic voting, and control of the electric power grid). In particular, we must shrink the academia/industry gap by making changes on both sides. My suggestion is to define a structure of CS education based on a core plus specializations and application areas, aiming eventually at licensing of software artifacts and at least some of the CS professionals who produce them. This might go hand-in-hand with an emphasis on lifelong industry/academia involvement for technical experts.</p -->
+<p>私たちは改善しなければなりません。そうしない限り、私たちのインフラは軋み、肥大化し、リソースを吸い取り続けるでしょう。ゆくゆくは、何か予測できない破滅的な形でどこかが壊れてしまうことにもなるでしょう（インターネットルーティング、オンライン銀行取引、電子投票、電力網の制御を想像してください）。とりわけ、学界と業界とのギャップを双方での変化を起こすことで縮めなければなりません。私の提案は、最終的にはソフトウェア作成についての免許制度を、少なくともそれを作り出す CS プロフェッショナルを目標としながら、 CS 教育の構造を特化と応用範囲とをコアに加えたものに基づいて定義することです。これは技術的専門家にとって生涯的な産学協同に注視することと手をとりあっていくかもしれません。</p>
+
+<!-- END BODY-6 -->
+
+<!-- BEGIN AUTHORINFO -->
+
+<a name="authorinfo"></a>
+<!-- h3 class="known-headings">Author</h3 -->
+<h3 class="known-headings">著者</h3>
+
+
+
+<!-- p><b>Bjarne Stroustrup</b> (<a href="http://delivery.acm.org/10.1145/1630000/1629192/mailto:bs@cs.tamu.edu">bs@cs.tamu.edu</a>) is the College of Engineering Chair in Computer Science Professor at Texas A&amp;M University in College Station, TX.</p -->
+<p><b>Bjarne Stroustrup</b> (<a href="http://delivery.acm.org/10.1145/1630000/1629192/mailto:bs@cs.tamu.edu">bs@cs.tamu.edu</a>) はテキサス州カレッジステーションにあるテキサス A&amp;M 大学で工学科の計算機科学教授の議長をしています。</p>
+
+<!-- END AUTHORINFO -->
+
+<!-- BEGIN FOOTNOTES -->
+
+<a name="footnotes"></a>
+<!-- h3 class="known-headings">Footnotes</h3 -->
+<h3 class="known-headings">脚注</h3>
+
+
+
+<p>DOI: http://doi.acm.org/10.1145/1629175.1629192</p>
+
+<!-- END FOOTNOTES -->
+
+<!-- BEGIN PERMISSION -->
+
+<hr class="Separator" />
+<a name="permission"></a>
+
+
+
+<!-- p>Copyright held by author.</p -->
+<p>著作権は著者が保持しています。</p>
+
+<!-- END PERMISSION -->
+
+<!-- BEGIN FOOTER -->
+
+<!-- p>The Digital Library is published by the Association for Computing Machinery. Copyright&nbsp;&copy;&nbsp;2010 ACM, Inc.</p -->
+<p>The Digital Library は Association for Computing Machinery が公開しています。 Copyright&nbsp;&copy;&nbsp;2010 ACM, Inc.</p>
+
+<!-- END FOOTER -->
+
+
+<hr class="Separator" />
+<a name="translation"></a>
+<h3 class="known-headings">日本語訳について</h3>
+
+<p>Published with permission from the Association for Computing Machinery.</p>
+<p>この文書は <a href="http://cacm.acm.org/">Communications of the ACM</a> の <a href="http://cacm.acm.org/magazines/2010/1">2010 年 1 月版 Vol 53, No.1</a> に掲載された記事（<a href="http://cacm.acm.org/magazines/2010/1/55760-what-should-we-teach-new-software-developers-why/fulltext">原文</a>）の日本語訳で、著者 Bjarne Stroustrup さん、および Association for Computing Machinery の許可のもとで公開しています。</p>
+
+<p>メールによる突然の申し出なのでダメ元だったのですが、寛大で素早い対応をしていただきました。</p>
+
+<p>誤訳・誤字脱字の指摘や翻訳の改良など、日本語訳についての連絡は里田 和敏 (<a href="mailto:k_satoda@f2.dion.ne.jp">k_satoda@f2.dion.ne.jp</a>) へおねがいします。</p>
+
+</body>
+</html>

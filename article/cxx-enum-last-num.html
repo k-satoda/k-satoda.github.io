@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>C++: enum の最後で列挙子の数を定義することの是非</title>
+<meta name="description" content="enum Item { ..., NumItems }; という形で列挙子の数 NumItems を定義する手法は便利でありよく見かけるものですが、見落とされがちなデメリットもあります。この文書ではそれらのデメリットを挙げ、代替となる提案を示します。" />
+</head>
+<body>
+<h1>enum の最後で列挙子の数を定義することの是非</h1>
+<h2>何の話？</h2>
+<p>C, C++ での列挙宣言 enum について、列挙子の数が欲しいことがよくあります。例えば各列挙子に対応する情報を取り出すためのテーブルを以下のように簡単な配列で定義して対応付けを行いたい場合などです。</p>
+<pre>int PriceOf(enum Item x)
+{
+  static int const price[<em>NumItems</em>] = {
+    123, // Item_A の値段
+    456, // Item_B の値段
+    789, // Item_C の値段
+  };
+  return price[x];
+}</pre>
+<p>この列挙子の数 <em>NumItems</em> を下記のように定義する手法があります。</p>
+<pre>enum Item
+{
+  Item_A,
+  Item_B,
+  Item_C,
+  <em>NumItems</em>
+};</pre>
+<p>このように NumItems を定義すると、このあと Item_D, Item_E, ... などが増えていっても NumItems が最後においてある限り NumItems は「列挙子の数」として正しい値であり続けます。わずらわしいメンテナンスが不要であり、便利です。</p>
+<p>この手法は便利なのでよく見かけるのですが、僕はこの手法には見落とされがちなデメリットがあると考えています。</p>
+<h2>何が問題？</h2>
+<ul>
+<li>enum Item 型の引数を受け取る関数に NumItems が渡されてもエラーにならない。</li>
+<li>NumItems を関数テンプレートの引数に渡すと enum Item で特殊化されてしまう。</li>
+<li>-Wswitch が有効利用できない。</li>
+</ul>
+<h2>じゃぁどうすれば？</h2>
+<p>ここでは下記のような手法を提案します。（コメントも「手法」に含みます。）</p>
+<pre>enum Item
+{
+  Item_A,
+  Item_B,
+  Item_C
+  // ※最後に追加するときは↓も更新してね。
+};
+int const <em>NumItems</em> = Item_C + 1;</pre>
+<p>ここで Item_C の後ろにカンマを置いていないのは意図的なもので、コメントを見ないで追加するような迂闊なプログラマにコンパイルエラーを見舞って注意を促すための策です。</p>
+<h2>それはちょっと・・・どうだろうか？</h2>
+<p>提案の手法では明らかに、最初に挙げた手法が解決してくれたはずの列挙子の数のメンテナンスが問題として復活しています。しかしどちらの手法でもそれぞれに問題があるのであれば、どちらにするかはそれらの問題の大小で考えるべきでしょう。</p>
+<p>まず最初に挙げた手法の問題は、列挙型を利用する箇所の数に比例して大きくなります。次に提案の手法の問題（更新ミスを起こす可能性）は、列挙の最後に追加などの編集が加えられる回数に比例して大きくなります。僕の結論は、列挙型を利用する箇所の数は時間が経つにつれて発散していくのに対して列挙の最後が編集される回数は時間が経つにつれて収束していくので、提案の手法を基本として使うほうが問題は小さくなることが多いだろう、というものです。</p>
+<p>理想を言えば、コンパイラから NumItems みたいな情報を取り出せるようになっててくれたらいいんですけどね。</p>
+<hr />
+<p>Copyright&nbsp;&copy;&nbsp;2012 <a href="http://k_satoda.users.sourceforge.net/">里田 和敏</a> (<a href="mailto:k_satoda@f2.dion.ne.jp">k_satoda@f2.dion.ne.jp</a>)</p>
+</body>
+</html>
